@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<table border="1">
+
+	{% for i in res %}
+<tr>
+{%  for j in i %}
+
+    <td>
+      {{j}}
+    </td>
+
+
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}
