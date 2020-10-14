@@ -13,7 +13,7 @@ mycursor = mydb.cursor()
 
 
 
-app = Flask(__name__)
+application = app = Flask(__name__)
 app.config['SECRET KEY'] = "123vittal"
 
 
