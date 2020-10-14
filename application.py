@@ -1,12 +1,18 @@
 from flask import Flask,render_template,request
+import json
 import mysql.connector
+
+with open("sensitiveInfo.json","r") as file:
+    sensitiveInfo=file.read()
+
+sensitiveInfoDict=json.loads(sensitiveInfo)
 
 mydb = mysql.connector.connect(
 
-    host= "database-pavan15f.cm8dpurmdxxc.ap-south-1.rds.amazonaws.com",
-    user="admin",
-    passwd="admin123",
-    database="database_pavan15f"
+    host= sensitiveInfoDict["host"],
+    user=sensitiveInfoDict["user"],
+    passwd=sensitiveInfoDict["password"],
+    database=sensitiveInfoDict["database"]
 )
 mycursor = mydb.cursor()
 
@@ -14,7 +20,7 @@ mycursor = mydb.cursor()
 
 
 application = app = Flask(__name__)
-app.config['SECRET KEY'] = "123vittal"
+app.config['SECRET KEY'] = sensitiveInfoDict["SECRET KEY"]
 
 
 @app.route('/')
