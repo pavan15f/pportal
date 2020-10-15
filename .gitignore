@@ -3,3 +3,4 @@ static/node_modules
 env
 pportal2.zip
 sensitiveInfo.json
+__pycache__

@@ -1,6 +1,13 @@
-from flask import Flask,render_template,request
 import json
 import mysql.connector
+
+from flask import Flask,render_template,request
+
+
+
+from forms import ProfileForm
+
+
 
 with open("sensitiveInfo.json","r") as file:
     sensitiveInfo=file.read()
@@ -32,6 +39,16 @@ def view():
     mycursor.execute("select * from profile")
     dbs = mycursor.fetchall()
     return render_template('view.html',student_details=dbs)
+
+
+
+@app.route("/add",methods=["GET","POST"])
+def addProfile():
+    pf=ProfileForm()
+    if pf.validate_on_submit():
+        profileInfo=request.form
+        app.logger.info(profileInfo)
+    return render_template("addProfile.html",form=pf)
 
 
 if __name__ == '__main__':
