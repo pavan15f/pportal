@@ -1,0 +1,61 @@
+{% extends "layout.html" %} {% block body %}
+<div class="container-fluid">
+    <form method="POST">
+        {{form.hidden_tag()}}
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="fName">{{form.fName.label}}</label> {{form.fName(class="form-control",id="fName",placeholder="Jhon")}}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="mName">{{form.mName.label}}</label> {{form.mName(class="form-control",id="mName",placeholder="Jacob")}}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="lName">{{ form.lName.label }}</label> {{form.lName(class="form-control",id="lName",placeholder="Smith")}}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="usn">{{ form.usn.label }}</label> {{form.usn(class="form-control",id="usn",placeholder="4NIYYBBXXX")}}
+            </div>
+            <div class="form-group col-md-8">
+                <label for="email">{{ form.email.label }}</label> {{form.email(class="form-control",id="email",placeholder="abc@xyz.com")}}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress2">Address 2</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}
