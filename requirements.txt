@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 appdirs==1.4.3
 asn1crypto==0.24.0
 attrs==19.3.0
@@ -100,3 +101,14 @@ webencodings==0.5.1
 Werkzeug==1.0.0
 yum-metadata-parser==1.1.4
 zipp==1.2.0
+=======
+click==7.1.2
+Flask==1.1.2
+itsdangerous==1.1.0
+Jinja2==2.11.2
+MarkupSafe==1.1.1
+mysql-connector-python==8.0.21
+protobuf==3.13.0
+six==1.15.0
+Werkzeug==1.0.1
+>>>>>>> fffdde3ff50d457928c504a616f81e5631fd65e9

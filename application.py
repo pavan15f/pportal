@@ -1,3 +1,4 @@
+
 import json
 import mysql.connector
 
@@ -8,6 +9,7 @@ from flask_wtf.csrf import CSRFProtect
 
 
 from forms import ProfileForm
+
 
 
 
@@ -29,6 +31,7 @@ mycursor = mydb.cursor()
 
 
 application = app = Flask(__name__)
+
 app.config.update(dict(
     SECRET_KEY=sensitiveInfoDict["SECRET KEY"],
     WTF_CSRF_SECRET_KEY=sensitiveInfoDict["WTF_CSRF_SECRET_KEY"]
@@ -46,6 +49,7 @@ def view():
 
 
 
+
 @app.route("/add",methods=["GET","POST"])
 def addProfile():
     pf=ProfileForm()
@@ -54,6 +58,7 @@ def addProfile():
         app.logger.info(profileInfo)
         return redirect(url_for(endpoint="home"))
     return render_template("addProfile.html",form=pf)
+
 
 
 if __name__ == '__main__':

@@ -2,5 +2,9 @@ static/node_modules
 .vscode
 env
 pportal2.zip
+<<<<<<< HEAD
 sensitiveInfo.json
 __pycache__
+=======
+sensitiveInfo.json
+>>>>>>> fffdde3ff50d457928c504a616f81e5631fd65e9
