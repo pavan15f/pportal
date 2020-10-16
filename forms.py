@@ -9,6 +9,3 @@ class ProfileForm(FlaskForm):
     email=StringField('Email',validators=[Email(message="Enter valid email")])
     usn=StringField('USN',validators=[regexp("4NI\d\d[A-Za-z][A-Za-z]\d\d\d",message="Enter valid USN")])
     submit=SubmitField("Submit")
-
-
-    
