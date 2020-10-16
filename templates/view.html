@@ -1,0 +1,27 @@
+{% extends 'layout.html' %} {% block body %}
+<div class="container-fluid">
+    <div class="table-responsive">
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">USN</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in student_details %}
+                <tr>
+                    {% for column in student %}
+                    <td>
+                        {{column}}
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

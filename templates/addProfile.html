@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% block body %}
+<div class="container-fluid">
+    <form method="POST">
+        {{ form.csrf_token }}
+
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="fName">{{form.fName.label}}</label> {{form.fName(class="form-control",id="fName",placeholder="John")}}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="mName">{{form.mName.label}}</label> {{form.mName(class="form-control",id="mName",placeholder="Jacob")}}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="lName">{{ form.lName.label }}</label> {{form.lName(class="form-control",id="lName",placeholder="Smith")}}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="usn">{{ form.usn.label }}</label> {{form.usn(class="form-control",id="usn",placeholder="4NIYYBBXXX")}}
+            </div>
+            <div class="form-group col-md-8">
+                <label for="email">{{ form.email.label }}</label> {{form.email(class="form-control",id="email",placeholder="abc@xyz.com")}}
+            </div>
+        </div>
+    <center><button type="submit" class="btn btn-primary" >Submit</button></center>
+    </form>
+</div>
+{% endblock %}

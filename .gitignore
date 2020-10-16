@@ -1,0 +1,6 @@
+static/node_modules
+.vscode
+env
+pportal2.zip
+sensitiveInfo.json
+__pycache__
