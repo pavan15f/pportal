@@ -3,27 +3,163 @@
     <form method="POST">
         {{ form.csrf_token }}
 
-
+        <!-- f,l,,m name  -->
+        <br>
+        <h3>Name</h3>
         <div class="form-row">
             <div class="form-group col-md-4">
-                <label for="fName">{{form.fName.label}}</label> {{form.fName(class="form-control",id="fName",placeholder="John")}}
+                <label for="fName">{{form.fName.label}}</label> {{form.fName(class="form-control",id="fName",placeholder="eg.Ranjan")}}
             </div>
             <div class="form-group col-md-4">
-                <label for="mName">{{form.mName.label}}</label> {{form.mName(class="form-control",id="mName",placeholder="Jacob")}}
+                <label for="mName">{{form.mName.label}}</label> {{form.mName(class="form-control",id="mName",placeholder="eg.Prasad")}}
             </div>
             <div class="form-group col-md-4">
-                <label for="lName">{{ form.lName.label }}</label> {{form.lName(class="form-control",id="lName",placeholder="Smith")}}
+                <label for="lName">{{ form.lName.label }}</label> {{form.lName(class="form-control",id="lName",placeholder="eg.Sharma")}}
             </div>
         </div>
+        <br>
+        <!-- usn and email -->
+        <h3>USN and Email</h3>
+        <hr class="mt-2 mb-3"/>
         <div class="form-row">
             <div class="form-group col-md-4">
-                <label for="usn">{{ form.usn.label }}</label> {{form.usn(class="form-control",id="usn",placeholder="4NIYYBBXXX")}}
+                <label for="usn">{{ form.usn.label }}</label> {{form.usn(class="form-control",id="usn",placeholder="eg.4NIYYBBXXX")}}
             </div>
             <div class="form-group col-md-8">
-                <label for="email">{{ form.email.label }}</label> {{form.email(class="form-control",id="email",placeholder="abc@xyz.com")}}
+                <label for="email">{{ form.email.label }}</label> {{form.email(class="form-control",id="email",placeholder="eg.abc@xyz.com")}}
             </div>
         </div>
-    <center><button type="submit" class="btn btn-primary" >Submit</button></center>
+        <!-- sslc,puc and degree -->
+        <br>
+
+
+        <!-- sslc details -->
+        <h3>SSLC Details</h3>
+        <hr class="mt-2 mb-3"/>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="sslcName">{{form.sslcName.label}}</label> {{form.sslcName(class="form-control",id="sslcName",placeholder="School Name")}}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="sslcMarks">{{form.sslcMarks.label}}</label> {{form.sslcMarks(class="form-control",id="sslcMarks",placeholder="Percentage")}}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="sslcYop">{{ form.sslcYop.label }}</label> {{form.sslcYop(class="form-control",id="sslcYop",placeholder="eg.20XX")}}
+            </div>
+        </div>
+        <br>
+
+
+        <!-- pu details -->
+        <h3>PU/12th Details</h3>
+        <hr class="mt-2 mb-3"/>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="pucName">{{form.pucName.label}}</label> {{form.pucName(class="form-control",id="pucName",placeholder="College Name")}}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="pucMarks">{{form.pucMarks.label}}</label> {{form.pucMarks(class="form-control",id="pucMarks",placeholder="Percentage")}}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="pucYop">{{ form.pucYop.label }}</label> {{form.pucYop(class="form-control",id="pucYop",placeholder="eg.20XX")}}
+            </div>
+        </div>
+        <br>
+
+        <!-- diploma details  -->
+        <h3>Diploma Details</h3>
+        <hr class="mt-2 mb-3"/>
+        <div class="form-row">
+            
+            <div class="form-group col-md-4">
+                <label for="diplomaMarks">{{form.diplomaMarks.label}}</label> {{form.diplomaMarks(class="form-control",id="diplomaMarks",placeholder="Percentage")}}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="diplomaYop">{{ form.diplomaYop.label }}</label> {{form.diplomaYop(class="form-control",id="diplomaYop",placeholder="eg.20XX")}}
+            </div>
+        </div>
+        <br>
+        
+        <!-- degree details -->
+        <h3>Degree Details</h3>
+        <hr class="mt-2 mb-3"/>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="degreeMarks">{{form.degreeMarks.label}}</label> {{form.degreeMarks(class="form-control",id="degreeMarks",placeholder="Percentage")}}
+            </div>
+            <div class="form-group col-md-3">
+                <label for="degreeYop">{{form.degreeYop.label}}</label> {{form.degreeYop(class="form-control",id="degreeYop",placeholder="eg.20XX")}}
+            </div>
+            <div class="form-group col-md-3">
+                <label for="course">{{ form.course.label }}</label> {{form.course(class="form-control",id="course",placeholder="eg.BE")}}
+            </div>
+            
+        </div>
+
+        <!-- ug -->
+        <br>
+        <hr class="mt-2 mb-3"/>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="ugBranch">{{form.ugBranch.label}}</label> {{form.ugBranch(class="form-control",id="ugBranch",placeholder="eg.CSE")}}
+            </div>
+            <div class="form-group col-md-3">
+                <label for="ugCgpa">{{form.ugCgpa.label}}</label> {{form.ugCgpa(class="form-control",id="ugCgpa",placeholder="cgpa")}}
+            </div>
+        </div>
+        
+        <!-- pg -->
+        
+        <br>
+        <h3>PG Details</h3>
+        <hr class="mt-2 mb-3"/>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="pgBranch">{{ form.pgBranch.label }}</label> {{form.pgBranch(class="form-control",id="pgBranch",placeholder="eg.IAR")}}
+            </div>
+            <div class="form-group col-md-3">
+                <label for="pgCgpa">{{ form.pgCgpa.label }}</label> {{form.pgCgpa(class="form-control",id="pgCgpa",placeholder="cgpa")}}
+            </div>
+        </div>
+        <br>
+        <hr class="mt-2 mb-3"/>
+        
+        
+        <!-- resume and image-->
+
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                <div class="file-field">
+                    <div class="btn btn-primary btn-sm float-left">
+                      <span>Upload resume</span>
+                      <input type="file">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="form-group col-md-5">
+                <div class="file-field">
+                    <div class="btn btn-primary btn-sm float-left">
+                      <span>Upload Photo</span>
+                      <input type="file">
+                    </div>
+                    
+                </div>
+            </div>
+        
+        </div>
+        <!-- submit and buttons -->
+        <div class="form-row">
+            <div class="form-group col-md-11">
+                <center><button type="submit" class="btn btn-primary" >Submit</button></center>
+            </div>
+            <div class="form-group col-md-1">
+                <button type="Add Info" class="btn btn-primary" >Add info</button>
+            </div>
+        </div>
+
+        
+    
     </form>
 </div>
 {% endblock %}
