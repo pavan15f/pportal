@@ -60,6 +60,13 @@ def addProfile():
     return render_template("addProfile.html",form=pf)
 
 
+@app.route("/job",methods=["GET","POST"])
+def job():
+    return render_template("job.html")
+
+@app.route("/CreateJob",methods=["GET","POST"])
+def createJob():
+    return render_template("createJob.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
